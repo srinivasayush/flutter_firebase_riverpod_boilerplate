@@ -5,10 +5,33 @@ A Flutter boilerplate app incorporating riverpod state management and firebase f
 ## Getting Started
 
 1. Add your google_services.json file in the android/app directory
-2. Run the flutter app with flutter run
+2. Go to the Firebase console and enable Google Authentication 
+3. Run the flutter app with flutter run
 ```cmd
 flutter run
 ```
+
+## Implemented Features
+
+Authentication
+- Google Sign In
+- Email and Password 
+
+Cloud Firestore
+- Adding users to users collection
+- Getting user data from users collection
+
+Riverpod
+- State management with Riverpod library
+- Able to access state from anywhere in Flutter application
+
+
+## Future Features
+Authentication
+- Other authentication methods such as Twitter, Github, etc.
+
+Cloud Storage
+- Upload multimedia files
 
 
 This project is a starting point for a Flutter application with Riverpod and Firebase.
