@@ -4,6 +4,13 @@ A Flutter boilerplate app incorporating riverpod state management and firebase f
 
 ## Getting Started
 
+1. Add your google_services.json file in the android/app directory
+2. Run the flutter app with flutter run
+```cmd
+flutter run
+```
+
+
 This project is a starting point for a Flutter application with Riverpod and Firebase.
 
 A few resources to get you started if this is your first Flutter project:
