@@ -19,7 +19,8 @@ Authentication
 
 Cloud Firestore
 - Adding users to users collection
-- Getting user data from users collection
+- Getting and displaying user data from users collection
+- Getting and displaying list of users
 
 Riverpod
 - State management with Riverpod library
