@@ -31,3 +31,15 @@ Stream<UserData> userDataStream(String uid) {
     ),
   );
 }
+
+List<UserData> _userDataListFromQuerySnapshot(QuerySnapshot qs) {
+  return qs.docs.map((ds) {
+    return UserData.fromMap(ds.data()!);
+  }).toList();
+}
+
+Future<List<UserData>> listUsers() async {
+  final usersQuerySnapshot = await usersRef.get();
+  final userDataList = _userDataListFromQuerySnapshot(usersQuerySnapshot);
+  return userDataList;
+}
