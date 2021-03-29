@@ -5,9 +5,28 @@ A Flutter boilerplate app incorporating riverpod state management and firebase f
 ## Getting Started
 
 1. Add your google_services.json file in the android/app directory
-2. Go to the Firebase console and enable Google Authentication 
-3. Run the flutter app with flutter run
-```cmd
+2. Delete the .gitignore file in the android/app directory
+3. Go to the android/app/build.gradle file and change the `applicationId` field to your unique [Android Application Id](https://developer.android.com/studio/build/application-id)
+4. Re-create the flutter app within the root directory
+```powershell
+flutter create .
+```
+5. Go to the [Firebase Console](https://console.firebase.google.com/) and enable Google Authentication, and Cloud Firestore
+6. Go to the [Firebase Console](https://console.firebase.google.com/) and add a new Android App
+    - When creating the app in console, it will ask you for an optional SHA-1 certificate.
+    - This app uses Google Sign In, so it requires an SHA-1 certifiate
+    - Generate an SHA-1 certificate for Google Sign In with
+    ```powershell
+    cd android
+    gradlew signingReport
+    ```
+    - Scroll to the bottom of the output and copy paste the SHA-1 certificate under the `debugAndroidTest` variant
+7. Get all dependencies for the app with
+```powershell
+flutter pub get
+```
+8. Run the flutter app with flutter run
+```powershell
 flutter run
 ```
 
@@ -19,7 +38,7 @@ Authentication
 
 Cloud Firestore
 - Adding users to users collection
-- Getting and displaying user data from users collection
+- Getting and displaying logged in user data from users collection
 - Getting and displaying list of users
 
 Riverpod
